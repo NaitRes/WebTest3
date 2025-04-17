@@ -1,0 +1,72 @@
+﻿.chara-box {
+    margin: 100px;
+    position: relative;
+    width: 248px; /* 角色卡片寬度 /
+            height: 400px; / 角色卡片高度 /
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            transition: transform 1s ease;
+        }
+        .chara-box:hover {
+            transform: scale(1.2);
+        }
+
+        .chara-image-container {
+            position: relative;
+            width: 100%;
+            height: 85%; / 固定圖片區塊高度，確保不壓縮 /
+        }
+
+        .chara-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; / 保持比例填滿 /
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .chara-element, .chara-type, .chara-rarity, .chara-type2{
+            position: absolute;
+            z-index: 2; / 確保它們顯示在最上層*/
+}
+
+.chara-element {
+    width: 50px;
+    height: 50px;
+    top: 60px;
+    left: 10px;
+}
+
+.chara-type {
+    width: 50px;
+    height: 50px;
+    top: 125px;
+    left: 12px;
+}
+.chara-type2 {
+    width: 50px;
+    height: 50px;
+    top: 60px;
+    right: 12px;
+}
+
+.chara-rarity {
+    width: 99px;
+    height: 27px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chara-name {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}

@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PokeMon</title>
+  <style>
+    .Big {
+      width: 20vw;
+      height: 60vh;
+      min-width: 100px;
+      min-height: 300px;
+      margin: 10px;
+      border: 5px solid rgb(216, 84, 84);
+      /*position: absolute;*/
+      top: 50%; /* Test-垂直置中 */
+      left: 50%; /* Test-水平置中 */
+      position: fixed;
+      transform: translate(-50%, -50%); /* 讓元素的中心點對準視窗的中心 */
+      z-index: 10;
+    }
+    .Name {
+      background-color: #e19640;
+      width: 100%;
+      height: 10%;
+      min-height: 66px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 50;
+    }
+
+    .StarShow {
+      background-color: #4258cf;
+      width: 100%;
+      height: 10%;
+      position: absolute;
+      top: 90%; /* 讓區塊的頂部距離父容器的 80%，從而使它靠下 */
+      left: 0;
+      z-index: 50;
+    }
+
+
+    .Photo {
+      background-color: #9cd7a7;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      /*top: 60px;  確保 Photo 在 Card 之下 */
+      left: 0;
+      z-index: 30;
+    }
+
+    .Photo > .Animal1 img {
+      width: 63%;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 70;
+    }
+
+    .Photo > .Animal2 img {
+      width: 60%;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+    }
+
+    .Photo > .Photo{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 50;
+    }
+
+    .Photo > .Energy>img{
+      width: 100%;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 60;
+
+      animation-name: Energy;
+      animation-duration: 1.2s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes Energy {
+      0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      25%{
+
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+      50%{
+
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+      75%{
+
+        transform: translate(-50%, -50%) rotate(270deg);
+      }
+      100%{
+
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+
+    }
+
+    .Energy{
+
+    }
+
+
+
+    /*.Photo img {
+      width: 60%;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }*/
+
+    .StarShow img {
+      width: 30%;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 60;
+    }
+
+
+    .Animal1>img {
+      /* 確保 Animal2 在底層 */
+    }
+
+
+    .Animal2>img {
+       /* 確保 Animal2 在底層 */
+    }
+
+    .StarShow>img{
+
+    }
+
+    .text {
+      color: #1ebfb0;
+      font-size: clamp(0.1rem, 6vw, 3rem);
+      font-weight: bold;
+      text-align: center;
+      line-height: 60px;
+    }
+
+    .Big:Hover{
+      border-color: #089f9a;
+      .Animal2>img {
+        Width: 100%;
+        Height: 100%;
+        position: absolute;
+        z-index: 70; /* 確保 Animal2 在底層 */
+      }
+      .Animal1>img {
+        position: absolute;
+        z-index: 0; /* 確保 Animal2 在底層 */
+      }
+      .Photo > .Energy>img{
+        animation-duration: 0.3s;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<div class="Big">
+
+  <div class="Name">
+    <div class="text">Frog</div>
+  </div>
+
+  <div class="Photo">
+
+    <div class="Animal1">
+    <img src="https://tw.portal-pokemon.com/play/resources/pokedex/img/pm/cf47f9fac4ed3037ff2a8ea83204e32aff8fb5f3.png">
+    </div>
+
+    <div class="Energy">
+    <img src="https://tw.portal-pokemon.com/play/resources/pokedex/img/pokemon_bg.png">
+    </div>
+
+    <div class="Photo"></div>
+
+    <div class="Animal2">
+    <img src="https://tw.portal-pokemon.com/play/resources/pokedex/img/pm/6b55babb3825ef9fa9e5d9ff44a14bdb8406ce97.png">
+    </div>
+
+  </div>
+
+  <div class="StarShow">
+  <div class="Star">
+    <img src="https://patchwiki.biligame.com/images/sr/c/c7/g380fo4o5accoa1rmlckz3e24vpx23e.png">
+  </div>
+  </div>
+
+
+</div>
+</body>
+</html>
